@@ -17,7 +17,7 @@ canvas {
 }
 body {
 	position: relative;
-	background: #bdbdbdaf;
+	background: linear-gradient(90deg, #72ffdcf6 0%, #1a7581 92%);
 }
 #mirror-image {
 	position: absolute;
@@ -29,7 +29,7 @@ body {
 	left: 442px;
 	top: 337px;
 }
-/* Basic css for gamecontrols */
+
 .control {
 	display: flex;
 	flex: 1;
@@ -61,17 +61,15 @@ body {
 	transform: scale(1.1, 1.1);
 }
 .fire-weapon {
-	font-size: 22px;
-	font-weight: bold;
-	line-height: 1em;
 	width: 100px;
 	font-family: cursive;
 	text-align: center;
-	background: linear-gradient(0deg, #fae12d 28%, #f40c0c 79%);
-	-webkit-background-clip: text;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1em;
 	 color: wheat;
 }
-/* Angle*/
+
 .control .slidecontainer {
 	height: 70%;
 	width: 80%;
@@ -90,11 +88,9 @@ body {
 	font-weight: bold;
 	font-family: cursive;
 	font-size: 16px;
-	background: linear-gradient(0deg, #fae12d 11%, #f40c0c 89%);
-	-webkit-background-clip: text;
 	color: wheat;
 }
-/*Power Selector */
+
 #power-selector {
 	font-size: 22px;
 	padding: 13px;
@@ -104,7 +100,7 @@ body {
 	font-family: cursive;
 	color: wheat;
 }
-/* Restart , Pause , Resume Buttons*/
+
 #game-control {
 	box-sizing: border-box;
 	position: relative;
