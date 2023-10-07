@@ -29,14 +29,14 @@ body {
 	left: 442px;
 	top: 337px;
 }
-/*Basic css for gamecontrols*/
+/* Basic css for gamecontrols */
 .control {
 	display: flex;
 	flex: 1;
 	justify-content: center;
 	align-items: center;
 }
-/*Weapon Selector */
+
 #weapon-selector {
 	font-size: 22px;
 	padding: 13px;
@@ -47,7 +47,7 @@ body {
 	color: wheat;
 }
 
-/* Fire Button*/
+
 .control #fire-weapon {
 	padding: 2px;
 	background: #212121;
