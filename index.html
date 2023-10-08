@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Tanks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="icon" href="./assets/favicon_image.jpeg" type="image/x-icon">
+	<link rel="stylesheet" href="./css/style_ayush.css">
 </head>
 <body>
-    
+   
+<canvas id="canvas" width="750" height="450"></canvas>
+<audio id="explosionSound" src="./assets/explosion_sound.mp3"></audio>
+<div id="container">
+	<div class="control" id="weapon">
+		<select id="weapon-selector" onchange="changeWeapon()">    
+			<option value="0">WEAPON</option> 
+            <option value="heaver" selected ="selected">HEAVER</option>
+            <option value="hurler">HURLER</option>
+            <option value="pitcher">PITCHER</option>
+        </select>
+	</div>
+	<div class="control" id="fire">
+		<span id="fire-weapon">
+			<h1 class="fire-weapon">FIRE</h1>
+		</span>
+	</div>
+	<div class="control" id="angle">
+		<div class="slidecontainer">
+			<input type="range" min="0" max="90" value="90" class="slider" id="myRange">
+			<p>Angle:<span id="demo"></span></p>
+		</div>
+	</div>
+	<div class="control" id="power">
+		<select id="power-selector" onchange="changePower()"> 
+            <option value="0">POWER</option> s
+            <option value="lower" selected ="selected">LOWER</option>
+            <option value="moderate">MODERATE</option>
+            <option value="higher">HIGHER</option>
+        </select>
+	</div>
+</div>
+<div id="game-control">
+	<div id="control-items">
+		<i class="fas fa-redo"></i>
+		<i class="far fa-pause-circle"></i>
+	</div>
+</div>
+<img id="image" src="./assets/tank2_image_edited.png"  style="width: 50px;" />
+<img id="mirror-image" src="./assets/tank1_image_edited.png " style="width: 50px;"/>
+
+<script src="./js/script_ayush.js"></script>
+<script src="./js/script_manya.js"></script>
 </body>
 </html>
