@@ -94,7 +94,7 @@ function drawMountain() {
 		cx.beginPath();
 		cx.moveTo(x, maxHeight);
 		cx.lineTo(x, currentHeight);
-		cx.strokeStyle = "#00C853";
+		cx.strokeStyle = "#E0EEE0";
 		cx.stroke();
 		cx.closePath();
 	}
@@ -273,7 +273,7 @@ function drawMyGame() {
 			tanksFinishedFiring = true;
 		}
 
-		if(tanksFinishedFiring){
+		if(tanksFinishedFiring && time_2 > timeOfFlight_2){
 			if (score_1 > score_2) {
 				cx.font = "bold 25px";
 				cx.fillStyle = "#FBC02D";
