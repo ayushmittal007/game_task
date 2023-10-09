@@ -133,3 +133,56 @@ controlItems.addEventListener("click", function(e) {
 		isPaused = false;
 	}
 });
+
+
+const maxHeight = canvas.height - 100;
+var maxSlope = 2.5; 
+var slopeChange = 1.0;
+var permanentSlope = 0;
+var currentHeight = canvas.height - 100;
+var slope = Math.random() * maxSlope * 2 - maxSlope;
+var slopeArray = [];
+for (let i = 0; i < 373; ++i) {
+	slopeArray[i] = {
+		x: Math.random() * slopeChange * 2 - slopeChange,
+		y: 0
+	};
+}
+
+function drawMountain() {
+	let i = 0;
+	for (var x = 187; x < 560; x++) {
+		currentHeight += slope;
+		slope += slopeArray[i].x;
+
+		if (slope > maxSlope) {
+			slope = maxSlope;
+		}
+		if (slope < -maxSlope) {
+			slope = -maxSlope;
+		}
+		if (currentHeight > maxHeight) {
+			currentHeight = maxHeight;
+			slope *= -1;
+		}
+		if (currentHeight < 150) {
+			currentHeight = 150;
+			slope *= -1;
+		}
+		if (x > 490 || x < 492) {
+			permanentSlope = 3;
+		}
+		if (x > 492) {
+			slope = permanentSlope;
+		}
+
+		slopeArray[i++].y = currentHeight;
+		
+		cx.beginPath();
+		cx.moveTo(x, maxHeight);
+		cx.lineTo(x, currentHeight);
+		cx.strokeStyle = "#E0EEE0";
+		cx.stroke();
+		cx.closePath();
+	}
+}
