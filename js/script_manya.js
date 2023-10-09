@@ -83,7 +83,7 @@ function drawMountain() {
 			slope *= -1;
 		}
 		if (x > 490 || x < 492) {
-			permanentSlope = 150 / (maxHeight - currentHeight + 1);
+			permanentSlope = 7;
 		}
 		if (x > 492) {
 			slope = permanentSlope;
