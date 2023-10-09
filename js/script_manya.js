@@ -3,7 +3,7 @@
 var x_1;
 var y_1;
 var u_1 = 82;
-var time_1 = 0.01;
+var time_1 = 0.1;
 var timeOfFlight_1 = 2 * u_1 * Math.sin(angle_1) / 10;
 var hitMountain_1 = false;
 
@@ -11,7 +11,7 @@ function resetProjectileTwo() {
 	x_1 = 0;
 	y_1 = 0;
 	u_1 = 82;
-	time_1 = 0.01;
+	time_1 = 0.1;
 	timeOfFlight_1 = 2 * u_1 * Math.sin(angle_1) / 10;
 	hitMountain_1 = false;
 }
