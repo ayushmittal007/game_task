@@ -4,8 +4,8 @@ var cx = canvas.getContext("2d");
 
 var score_1 = 0;
 var score_2 = 0;
-var angle_1 = Math.PI / 2;
-var angle_2 = Math.PI / 2;
+var angle_1 = Math.PI / 3;
+var angle_2 = Math.PI / 3;
 var remChances_1 = 3;
 var remChances_2 = 3;
 var isPaused = false;
