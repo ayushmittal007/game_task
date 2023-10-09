@@ -221,7 +221,7 @@ function drawMyGame() {
 			tanksFinishedFiring = true;
 		}
 
-		if(tanksFinishedFiring && time_2 > timeOfFlight_2){
+		if(tanksFinishedFiring && (time_2 > timeOfFlight_2 || hitMountain_2)){
 			if (score_1 > score_2) {
 				cx.font = "bold 25px";
 				cx.fillStyle = "#FBC02D";
