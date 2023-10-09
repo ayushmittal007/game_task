@@ -33,7 +33,7 @@ function displayText() {
 
 	cx.font = "15px CURSIVE";
 	cx.fillStyle = "lightblue";
-	cx.fillText(`Chances : ${remChances_1}`, 20, 80);
+	cx.fillText(`Chances Left: ${remChances_1}`, 20, 80);
 	
 	cx.font = "20px CURSIVE";
 	cx.fillStyle = "white";
@@ -48,7 +48,7 @@ function displayText() {
 	cx.font = "15px CURSIVE";
 	cx.fillStyle = "lightblue";
 	cx.textAlign = "right";
-	cx.fillText(`Chances : ${remChances_2}`, canvas.width - 20, 80);
+	cx.fillText(`Chances Left: ${remChances_2}`, canvas.width - 20, 80);
 }
 
 function changeWeapon() {
@@ -103,7 +103,7 @@ slider.oninput = function() {
 	output.innerHTML = `${this.value}deg`;
 	angle_1 = Math.PI * this.value / 180;
 	angle_2 = Math.PI * this.value / 180;
-};
+}
 
 const controlItems = document.querySelector("#control-items");
 const pause = document.querySelector(".fa-pause-circle");
