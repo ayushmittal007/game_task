@@ -13,6 +13,7 @@ var isFire_1 = false;
 var isFire_2 = false;
 var weapon_1 = "heaver";
 var weapon_2 = "heaver";
+var turn_of = 1;
 
 function displayText() {
 	
@@ -20,6 +21,11 @@ function displayText() {
 	cx.fillStyle = "red";
 	cx.textAlign = "center";
 	cx.fillText("POCKET TANKS", canvas.width / 2, 50);
+
+	cx.font = "30px Times New Roman";
+	cx.fillStyle = "red";
+	cx.textAlign = "center";
+	cx.fillText(`Player ${turn_of} Turn`, canvas.width / 2, 100);
 
 	cx.font = "20px CURSIVE";
 	cx.fillStyle = "white";
@@ -68,6 +74,13 @@ function changeWeapon() {
 
 const fire = document.querySelector("#fire-weapon");
 fire.addEventListener("click", function(){
+	turn_of++;
+	if(turn_of % 2 == 0){
+		turn_of = 2;
+	}
+	else{
+		turn_of = 1;
+	}
 	function playExplosionSound() {
 		var explosionSound = document.getElementById("explosionSound");
 		explosionSound.play();
